@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";:root {
+  --background: 210 20% 98%;
+  --foreground: 222 47% 11%;
+  --border: 214 32% 91%;
+  --card: 0 0% 100%;
+  --sidebar: 222 47% 11%;          /* fundo escuro da sidebar */
+  --sidebar-foreground: 210 40% 98%;
+  --primary: 222 47% 11%;
+  --destructive: 0 84.2% 60.2%;   /* vermelho para alertas */
+
+  --app-font-sans: 'Inter', sans-serif;
+  --app-font-serif: 'Playfair Display', serif;  /* títulos */
+  --radius: 0.25rem;
+}.dark {
+  --background: 222 47% 11%;
+  --foreground: 210 40% 98%;
+  --sidebar: 222 47% 8%;
+  --primary: 210 40% 98%;
+  /* ... demais variáveis invertidas */
+}@layer base {
+  * { @apply border-border; }
+  body { @apply font-sans antialiased bg-background text-foreground; }
+  h1, h2, h3, h4, h5, h6 { @apply font-serif tracking-tight; }
+}
